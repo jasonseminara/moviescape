@@ -1,5 +1,4 @@
-DROP DATABASE IF EXISTS moviescape_db;
-CREATE DATABASE moviescape_db;
+
 
 DROP TABLE IF EXISTS locations;
 DROP TABLE IF EXISTS movies;

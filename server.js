@@ -26,8 +26,8 @@ app.get('/', movieController.index, (req, res) => {
 app.use('/movies', movieRouter);
 
 
-app.use('*', (req, res) => {
-  res.render('404');
+app.use('/', (req, res) => {
+  res.send( 'Hello');
 });
 
 

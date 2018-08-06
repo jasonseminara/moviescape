@@ -6,10 +6,16 @@ const db = pgp(dbConfig);
 module.exports = {
   findAll() {
     return db.many(`
-      SELECT movies.id AS movie_id, title, starring, year, description, img, locations.id AS locations_id, name
+      SELECT 
+      movies.id AS movie_id, 
+      title, 
+      starring, 
+      year, 
+      description, 
+      img, 
+      locations.id AS locations_id
       FROM movies
-      JOIN locations
-      ON movies.id = locations.id 
+      JOIN locations ON locations_id = locations.id 
     `);
   },
 
@@ -22,7 +28,12 @@ module.exports = {
 
   findOne(id) {
     return db.one(`
-        SELECT movies.id AS movie_id, title, starring, year, description, locations.id AS name_id, name
+        SELECT movies.id AS movie_id, 
+        title,
+        starring, 
+        year, 
+        description, 
+        locations.id AS name_id, name
         FROM movies
         JOIN locations
         ON movies.type = locations.id
