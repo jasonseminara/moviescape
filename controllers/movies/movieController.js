@@ -1,6 +1,7 @@
-const model = require('../models/movies');
+const model = require('../../models/movies.js');
 
 module.exports = {
+
   index(req, res, next) {
     model.findAll()
       .then((movies) => {

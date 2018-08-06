@@ -3,7 +3,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const path = require('path');
-const movieController = require('./controllers/movieController');
+const movieController = require('./controllers/movies/movieController');
 const movieRouter = require('./router/movieRouter');
 
 const app = express();

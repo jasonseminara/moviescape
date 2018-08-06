@@ -9,7 +9,7 @@ module.exports = {
       SELECT movies.id AS movie_id, title, starring, year, description, img, locations.id AS locations_id, name
       FROM movies
       JOIN locations
-      ON movies.name = locations.id 
+      ON movies.id = locations.id 
     `);
   },
 
