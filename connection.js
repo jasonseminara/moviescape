@@ -1,7 +1,7 @@
 const pgp = require('pg-promise')();
 
 const opts = {
-  database: 'moviescape_db',
+  database: 'moviesscape_db',
 };
 
 const db = pgp(opts);

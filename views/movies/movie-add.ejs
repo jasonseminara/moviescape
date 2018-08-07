@@ -1,9 +1,30 @@
-<%- include('../partials/boilerplate') %>
-<form id="movie" method="POST" action="/movies">
-  <input type="text" name="name" placeholder="movie title">
-  <textarea form="movie" name="description" placeholder="movie description"></textarea>
-  </select>
-  <input type="submit" value="Add soda">
-</form>
-<a href="/movies/">Back</a>
-<%- include('../partials/footer') %>
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div class="page-container">
+
+      <h2 class="page-title">New Movie</h2>
+      <form class="new-item-form" method="POST" action="/movies">
+        <label>Title</label>
+        <input name="title" type="text" />
+        <label>Starring</label>
+        <input name="starring" type="text" />
+        <label>Year</label>
+        <input name="date" type="number" />
+        <label>Description:</label>
+        <input name="description" type = "text">
+        <label>Movie Poster</label>
+        <input name="img" type = "text">
+        <label>Location</label>
+          <option value="">Select a location...</option>
+          <% location.forEach( location => { %>
+            <option value="<%= location.id %>"><%= location.name %></option>
+          <% }) %>
+        </select>
+        <button type="submit">Create Movie</button>
+      </form>
+    </div>
+  </body>
+</html>

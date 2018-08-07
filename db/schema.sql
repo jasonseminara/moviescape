@@ -1,7 +1,11 @@
+DROP DATABASE IF EXISTS moviesscape_db;
+CREATE DATABASE moviesscape_db;
 
+\c moviesscape_db;
 
-DROP TABLE IF EXISTS locations;
 DROP TABLE IF EXISTS movies;
+DROP TABLE IF EXISTS locations;
+
 
 CREATE TABLE locations (
   id SERIAL PRIMARY KEY,
@@ -15,5 +19,5 @@ CREATE TABLE movies (
   year INTEGER,
   description TEXT,
   img TEXT,
-  locations_id INTEGER REFERENCES locations(id)
+  locations_id INTEGER REFERENCES locations(id) ON DELETE CASCADE
 );

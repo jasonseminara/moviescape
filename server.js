@@ -7,7 +7,7 @@ const movieController = require('./controllers/movies/movieController');
 const movieRouter = require('./router/movieRouter');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use(logger('dev'));
 app.set('view engine', 'ejs');
@@ -19,14 +19,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', movieController.index, (req, res) => {
-  res.render('index');
+res.render('index');
 });
 
 
 app.use('/movies', movieRouter);
 
 
-app.use('/', (req, res) => {
+app.use('/movies/:id', (req, res) => {
   res.send( 'Hello');
 });
 

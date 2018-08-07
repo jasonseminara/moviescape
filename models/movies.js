@@ -1,21 +1,10 @@
-const pgp = require('pg-promise')();
-const dbConfig = require('../config/dbConfig');
-
-const db = pgp(dbConfig);
+const db = require('../connection');
 
 module.exports = {
   findAll() {
     return db.many(`
-      SELECT 
-      movies.id AS movie_id, 
-      title, 
-      starring, 
-      year, 
-      description, 
-      img, 
-      locations.id AS locations_id
+      SELECT *
       FROM movies
-      JOIN locations ON locations_id = locations.id 
     `);
   },
 
@@ -28,16 +17,9 @@ module.exports = {
 
   findOne(id) {
     return db.one(`
-        SELECT movies.id AS movie_id, 
-        title,
-        starring, 
-        year, 
-        description, 
-        locations.id AS name_id, name
+        SELECT *
         FROM movies
-        JOIN locations
-        ON movies.type = locations.id
-        WHERE movies.id = $1
+        WHERE id = $1
         `, id);
   },
 

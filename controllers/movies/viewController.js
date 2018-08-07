@@ -1,11 +1,11 @@
 module.exports = {
 
-    showAll(req, res) {
-      res.render('moviescape/movie-index');
+    showAll(req, res) { 
+      res.render('index');
     },
 
     showOne(req, res) {
-      res.render('moviescape/movie-one');
+      res.render('movies/movie-one');
     },
 
     showBlankForm(req, res) {
