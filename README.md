@@ -27,3 +27,7 @@ As a user I want to add / edit / delete movies to each location
 # Description 
 -- edit / delete movie 
 <img width="814" alt="screen shot 2018-08-01 at 10 13 24 am" src="https://media.git.generalassemb.ly/user/14898/files/1714d4f6-9575-11e8-85bc-68ce33945f51">
+
+
+(this isn't my video, saving the link here for later)
+https://docs.google.com/forms/d/e/1FAIpQLSe0hd2P0rv98YvO6_ICHaeYE-bIuSObRIicsHr7FfUZw4glHg/viewform
