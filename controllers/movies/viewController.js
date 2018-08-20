@@ -9,11 +9,11 @@ module.exports = {
   },
 
   showBlankForm(req, res) {
-    res.render('moviescape/movie-add');
+    res.render('movies/movie-add');
   },
 
   showEditForm(req, res) {
-    res.render('moviescape/movie-dit');
+    res.render('movies/movie-edit');
   },
 
   handleCreate(req, res) {

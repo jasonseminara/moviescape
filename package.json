@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+    "db:drop": "dropdb moviesscape_db",
     "db:init": "createdb moviesscape_db",
     "db:reset:dev": "psql -d moviesscape_db -f ./db/schema.sql",
     "db:seed:dev": "psql -d moviesscape_db -f ./db/seed.sql",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js"
