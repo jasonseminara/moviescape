@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', movieController.index, (req, res) => {
-res.render('index');
+  res.render('index');
 });
 
 
@@ -27,7 +27,7 @@ app.use('/movies', movieRouter);
 
 
 app.use('/movies/:id', (req, res) => {
-  res.send( 'Hello');
+  res.send('Hello');
 });
 
 
